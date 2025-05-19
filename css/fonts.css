@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "AcciaPiano";
+    src: url("../font/AcciaPiano-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "AcciaPiano";
+    src: url("../font/AcciaPiano-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "AcciaPiano";
+    src: url("../font/AcciaPiano-ExtraBold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "AcciaPiano";
+    src: url("../font/AcciaPiano-BoldItalic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "AcciaPiano";
+    src: url("../font/AcciaPiano-Medium.ttf") format("truetype");
+    font-weight: 500; /* or medium */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "AcciaPiano";
+    src: url("../font/AcciaPiano-MediumItalic.ttf") format("truetype");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "AcciaPiano";
+    src: url("../font/AcciaPiano-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "AcciaPiano";
+    src: url("../font/AcciaPiano-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+}
+
+body {
+    font-family: "AcciaPiano", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
