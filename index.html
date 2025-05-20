@@ -21,26 +21,168 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
     </head>
     <body>
-        <header></header>
+        <header class="header">
+            <div class="header-contact-data">
+                <a href="tel:+380936523526">+38 093 652 35 26</a>
 
-        <main>
-            <section class="hero">
-                <div class="container">
-                    <h1>D U B I K</h1>
-                    <div class="contact-tel">
-                        <a href="tel:+380936523526">+38 093 652 35 26</a>
-                        <a href="tel:+380939696158">+38 093 969 61 58</a>
-                    </div>
-                    <div class="contact-email">
-                        <a href="mailto:tov.dubik@ukr.net">tov.dubik@ukr.net</a>
-                    </div>
+                <a href="tel:+380939696158">+38 093 969 61 58</a>
+
+                <div>м. Львів, вул. Городоцька 225</div>
+
+                <a href="mailto:tov.dubik@ukr.net">tov.dubik@ukr.net</a>
+            </div>
+            <div class="sidebar">
+                <div class="header-container">
                     <div class="logo-wrapper">
                         <img src="images/logo.png" alt="logo image" />
+                    </div>
+                    <nav class="flex header-navigation">
+                        <ul class="header-nav-list flex flex-justify-center">
+                            <li><a class="nav-link current" href="#hero">ГОЛОВНА</a></li>
+                            <li><a class="nav-link" href="#about">ПРО НАС</a></li>
+
+                            <li><a class="nav-link" href="#services">ПОСЛУГИ</a></li>
+
+                            <li><a class="nav-link" href="#contact">КОНТАКТИ</a></li>
+                        </ul>
+                    </nav>
+                    <div class="socials">
+                        <a class="social-link" href="https://www.facebook.com/tov.dubik" target="_blank">
+                            <svg class="social-icon" width="20" height="20">
+                                <use href="images/icons.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                        <a
+                            class="social-link"
+                            href="https://www.instagram.com/tov.dubik?igsh=MXAydWw5MXE4Nzl6Zg=="
+                            target="_blank">
+                            <svg class="social-icon" width="20" height="20">
+                                <use href="images/icons.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                        <a class="social-link" href="https://www.tiktok.com/@tov.dubik" target="_blank">
+                            <svg class="social-icon" width="20" height="20">
+                                <use href="images/icons.svg#icon-tiktok"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="hero" class="hero">
+                <div class="container">
+                    <h1>ТОВ ДУБІК</h1>
+                    <h2>Ваш надійний партнер у сучасному будівництві.</h2>
+                    <div><a href="#contact" class="cta-button">Зв’язатись з нами</a></div>
+                    <div class="slogan-highlight">
+                        <span>01. Довговічні фасади.</span>
+                        <span>02. Сучасні рішення.</span>
+                        <span>03. Надійне виконання.</span>
                     </div>
                 </div>
             </section>
             <section class="about">
+                <div id="about" class="section-anchor"></div>
+                <div class="container">
+                    <h2>Про компанію ДУБІК</h2>
+                    <p>
+                        <strong>ТОВ ДУБІК</strong> — це команда досвідчених професіоналів, що понад 10 років працює в
+                        галузі фасадного будівництва та покрівельних систем. Поєднуємо інженерну точність із естетикою,
+                        забезпечуючи довговічні та ефективні рішення для будь-якого типу будівель. Ми впроваджуємо
+                        сучасні технології монтажу та використовуємо перевірені матеріали: алюмінієві композитні панелі,
+                        HPL, керамограніт, фіброцементні плити, архітектурну кераміку та скло.
+                    </p>
+
+                    <p>Наш підхід — це:</p>
+                    <ul>
+                        <li>індивідуальний підхід до кожного клієнта;</li>
+                        <li>технічна компетентність і чітке планування;</li>
+                        <li>якість виконання та гарантія результату.</li>
+                    </ul>
+
+                    <p>
+                        Ми реалізували десятки проєктів у Львові, Луцьку, Моршині та інших містах України. Від фасаду
+                        школи до готельного комплексу — ми втілюємо ідеї в реальність.
+                    </p>
+                </div>
+            </section>
+            <section class="aluminum-section">
+                <div id="services" class="section-anchor"></div>
+                <div class="container">
+                    <h2 class="section-title">Алюмінієві конструкції</h2>
+                    <p class="intro-text">
+                        Конструкції з алюмінієвого профілю, заповнені склопакетами або склом.
+                        <br /><br />Завдяки міцності цього металу, його стійкості до впливу зовнішнього середовища та
+                        доступній ціні – сфера його застосування доволі широка. Властивості матеріалу дозволяють
+                        виготовляти із нього конструкції практично будь-якої форми та розміру.<br />
+                        <br />Завдяки сучасним технологіям фарбування – алюміній доступний в будь-якому кольорі.
+                        Особливо вишукано виглядають алюмінієві конструкції з ламінацією під натуральне дерево.
+                    </p>
+
+                    <div class="card-container" id="cardSlider">
+                        <div class="card active">
+                            <div class="card-text">
+                                <h3>Холодні – алюмінієві профільні системи</h3>
+                                <p>
+                                    Характеризуються високим ступенем захисту від шуму, пилу та бруду, але низьким
+                                    енергозбереженням. Використовуються для скління неопалювальних приміщень: лоджій,
+                                    балконів, альтанок і терас.
+                                </p>
+                            </div>
+                            <div class="card-image">
+                                <img src="images/aluminum/cold-system.jpg" alt="Холодні алюмінієві системи" />
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-text">
+                                <h3>Теплі – алюмінієві системи з терморозривом</h3>
+                                <p>
+                                    Терморозрив являє собою вставку між зовнішньою та внутрішньою частиною рами з
+                                    матеріалу-теплоізолятору. Такі конструкції мають високу звуко- і теплоізоляцію.
+                                    Ідеальні для опалюваних приміщень.
+                                </p>
+                            </div>
+                            <div class="card-image">
+                                <img src="images/aluminum/warm-system.jpg" alt="Теплі алюмінієві системи" />
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-text">
+                                <h3>Стійко–ригельна система</h3>
+                                <p>
+                                    Призначена для різноманітних фасадних і світлових приміщень. Забезпечує високу
+                                    теплоізоляцію та мінімалістичний сучасний вигляд.
+                                </p>
+                            </div>
+                            <div class="card-image">
+                                <img src="images/aluminum/curtain-wall.jpg" alt="Стійко-ригельна система" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-controls">
+                        <button onclick="prevCard()">←</button>
+                        <div class="dots">
+                            <span class="dot active" onclick="goToCard(0)"></span>
+                            <span class="dot" onclick="goToCard(1)"></span>
+                            <span class="dot" onclick="goToCard(2)"></span>
+                        </div>
+                        <button onclick="nextCard()">→</button>
+                    </div>
+                </div>
+            </section>
+            <!--
+            <section class="about">
                 <h2>Про компанію</h2>
+                <div>
+                    Ми спеціалізуємось на монтажі вентильованих фасадів, встановленні алюмінієвих конструкцій та
+                    покрівельних роботах. Поєднуємо інженерну точність із естетикою, забезпечуючи довговічні та
+                    ефективні рішення для будь-якого типу будівель.
+                </div>
                 <p>
                     Ми – компанія професіоналів з великим досвідом, що спеціалізується на монтажі вентильованих фасадів,
                     встановленні алюмінієвих вікон та покрівельних роботах. Ваш надійний партнер у різних галузях.
@@ -83,7 +225,7 @@
                     <img src="images/services/roof.jpg" alt="Покрівельні роботи" />
                 </div>
             </section>
-
+          
             <section class="gallery">
                 <h2>Наші роботи</h2>
                 <div class="image-grid">
@@ -119,56 +261,111 @@
                     </a>
                 </div>
             </section>
-
+-->
             <section class="contact">
-                <h2>Контакти</h2>
-                <p><strong>Адреса:</strong> м. Львів, вул. Городоцька 225</p>
-                <p><strong>Телефон:</strong> +38 093 652 35 26</p>
-                <p><strong>Email:</strong> tov.dubik@ukr.net</p>
+                <div id="contact" class="section-anchor"></div>
+                <div class="container">
+                    <div class="contact-data">
+                        <h2>Контакти</h2>
+                        <p><strong>Адреса офіса:</strong></p>
+                        <p>
+                            <svg class="help-icon" width="20" height="20">
+                                <use href="images/icons.svg#icon-map2"></use>
+                            </svg>
+                            м. Львів, вул. Городоцька 225
+                        </p>
+                        <p>
+                            <strong>Телефон:</strong>
+                        </p>
+                        <p>
+                            <svg class="help-icon" width="20" height="20">
+                                <use href="images/icons.svg#icon-phone"></use>
+                            </svg>
+                            <a href="tel:+380936523526">+38 093 652 35 26</a>
+                        </p>
+                        <p>
+                            <svg class="help-icon" width="20" height="20">
+                                <use href="images/icons.svg#icon-phone"></use>
+                            </svg>
+                            <a href="tel:+380939696158">+38 093 969 61 58</a>
+                        </p>
+                        <p><strong>Email:</strong></p>
+                        <p>
+                            <svg class="help-icon" width="24" height="24">
+                                <use href="images/icons.svg#icon-mail4"></use>
+                            </svg>
+                            <a href="mailto:tov.dubik@ukr.net">tov.dubik@ukr.net</a>
+                        </p>
+
+                        <div class="socials">
+                            <a class="social-link" href="https://www.facebook.com/tov.dubik" target="_blank">
+                                <svg class="social-icon" width="20" height="20">
+                                    <use href="images/icons.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                            <a
+                                class="social-link"
+                                href="https://www.instagram.com/tov.dubik?igsh=MXAydWw5MXE4Nzl6Zg=="
+                                target="_blank">
+                                <svg class="social-icon" width="20" height="20">
+                                    <use href="images/icons.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
+                            <a class="social-link" href="https://www.tiktok.com/@tov.dubik" target="_blank">
+                                <svg class="social-icon" width="20" height="20">
+                                    <use href="images/icons.svg#icon-tiktok"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1530.2617600704052!2d23.973999303389434!3d49.83149740237385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae763b38441c5%3A0x144eb17e53f889c8!2z0LLRg9C70LjRhtGPINCT0L7RgNC-0LTQvtGG0YzQutCwLCAyMjUsINCb0YzQstGW0LIsINCb0YzQstGW0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNzkwMDA!5e0!3m2!1suk!2sua!4v1747645766101!5m2!1suk!2sua"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
             </section>
         </main>
 
         <footer class="footer">
-            <div class="footer-container white">
+            <div class="container">
                 <div class="footer-content">
-                    <img class="footer-logo" src="images/logo-light.png" alt="logo image" />
-                    <nav>
-                        <ul class="footer-nav">
-                            <li><a class="footer-nav-link white" href="team">About us</a></li>
-                            <li>
-                                <a class="footer-nav-link white" target="_blank" href="legal/privacy-policy"
-                                    >Privacy policy</a
-                                >
-                            </li>
-                            <li>
-                                <a class="footer-nav-link white" target="_blank" href="legal/terms-of-service">T&C</a>
-                            </li>
-                            <li>
-                                <a class="footer-nav-link white" target="_blank" href="legal/cookies-policy"
-                                    >Cookies policy</a
-                                >
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="footer-social">
+                    <div class="logo-wrapper">
+                        <img src="images/logo.png" alt="logo image" />
+                    </div>
+
+                    <div class="socials">
+                        <a class="social-link" href="https://www.facebook.com/tov.dubik" target="_blank">
+                            <svg class="social-icon" width="20" height="20">
+                                <use href="images/icons.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
                         <a
                             class="social-link"
-                            href="https://www.linkedin.com/company/fantastic-voyage-labs"
-                            target="_blank"
-                            aria-label="Link to Linkedin">
-                            <svg class="nav-link-icon" width="40" height="40">
-                                <use href="images/icons.svg#icon-tlinkedin"></use>
+                            href="https://www.instagram.com/tov.dubik?igsh=MXAydWw5MXE4Nzl6Zg=="
+                            target="_blank">
+                            <svg class="social-icon" width="20" height="20">
+                                <use href="images/icons.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                        <a class="social-link" href="https://www.tiktok.com/@tov.dubik" target="_blank">
+                            <svg class="social-icon" width="20" height="20">
+                                <use href="images/icons.svg#icon-tiktok"></use>
                             </svg>
                         </a>
                     </div>
                 </div>
-                <div class="watermark">© 2025 ТОВ ДУБІК. Усі права захищені.</div>
+                <div class="watermark">© 2025 ТОВ ДУБІК. <span>Усі права захищені!</span></div>
             </div>
         </footer>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
         <script src="js/lib/bodyScrollLock.min.js"></script>
+        <script src="js/aluminum-card.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+        
         <script src="js/header.js"></script>
         <script src="js/mobile-menu.js"></script>
+        -->
     </body>
 </html>
