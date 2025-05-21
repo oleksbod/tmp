@@ -17,3 +17,10 @@ const observerLogo = new IntersectionObserver(
 );
 
 observerLogo.observe(aboutSection);
+
+function toggleDescription(card) {
+    document.querySelectorAll(".partner-card").forEach((el) => {
+        if (el !== card) el.classList.remove("active");
+    });
+    card.classList.toggle("active");
+}
