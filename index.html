@@ -179,6 +179,64 @@
                     </div>
                 </div>
             </section>
+
+            <section id="facade-solutions" class="facade-section">
+                <div class="container">
+                    <h2 class="section-title">Фасадні рішення</h2>
+                    <div class="facade-grid">
+                        <div class="facade-card" onclick="openModal('ventilated')">
+                            <img src="images/facade/ventilated.jpg" alt="Вентильований фасад" />
+                            <h3>Вентильований фасад</h3>
+                            <p>Сучасний захист та ефективна ізоляція будівлі.</p>
+                        </div>
+
+                        <div class="facade-card" onclick="openModal('acp')">
+                            <img src="images/facade/acp.jpg" alt="Алюмінієві композитні панелі" />
+                            <h3>Алюмінієві композитні панелі</h3>
+                            <p>Міцні, легкі панелі з багатошаровою структурою.</p>
+                        </div>
+
+                        <div class="facade-card" onclick="openModal('hpl')">
+                            <img src="images/facade/hpl.jpg" alt="HPL панелі" />
+                            <h3>HPL панелі</h3>
+                            <p>Зовнішні декоративні панелі для фасадів і меблів.</p>
+                        </div>
+
+                        <div class="facade-card" onclick="openModal('porcelain')">
+                            <img src="images/facade/porcelain.jpg" alt="Керамограніт" />
+                            <h3>Керамограніт</h3>
+                            <p>Міцний і вогнестійкий матеріал з широким дизайном.</p>
+                        </div>
+
+                        <div class="facade-card" onclick="openModal('fibrocement')">
+                            <img src="images/facade/fibrocement.jpg" alt="Фіброцементні плити" />
+                            <h3>Фіброцементні плити</h3>
+                            <p>Стійкі до атмосферних умов — довговічний вибір.</p>
+                        </div>
+
+                        <div class="facade-card" onclick="openModal('ceramic')">
+                            <img src="images/facade/ceramic.jpg" alt="Керамічні панелі" />
+                            <h3>Керамічні панелі</h3>
+                            <p>Ідеальні для будь-якого клімату та вологості.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Модальне вікно -->
+                <div id="facade-modal" class="facade-modal">
+                    <div class="modal-content">
+                        <button class="modal-close" onclick="closeModal()">
+                            <svg class="modal-btn-icon" width="15" height="15">
+                                <use href="./images/icons.svg#icon-cross"></use>
+                            </svg>
+                        </button>
+                        <img id="modal-img" src="" alt="Зображення" />
+                        <h3 id="modal-title"></h3>
+                        <p id="modal-description"></p>
+                    </div>
+                </div>
+            </section>
+
             <!--
             <section class="about">
                 <h2>Про компанію</h2>
@@ -475,6 +533,8 @@
         <script src="js/header.js"></script>
         <script src="js/mobile-menu.js"></script>
         <script src="js/home.js"></script>
+        <script src="js/facade.js"></script>
+        <script src="js/partners.js"></script>
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
               
         -->

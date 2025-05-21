@@ -167,6 +167,9 @@ body {
     background: radial-gradient(ellipse at top center, #2a2a2a 0%, #000000 100%);
     min-height: 100vh;
 }
+body.no-scroll {
+    overflow: hidden;
+}
 
 .help-icon {
     display: inline-block;
