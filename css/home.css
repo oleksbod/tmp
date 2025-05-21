@@ -116,7 +116,8 @@ section {
 }
 
 .about h2,
-.partners h2 {
+.partners h2,
+.roof-tabs-section h2 {
     margin-bottom: 20px;
     border-bottom: 2px solid var(--text-color);
     display: inline-block;
@@ -612,6 +613,154 @@ main {
     color: var(--white-color);
     cursor: pointer;
     z-index: 1;
+}
+/********************/
+/*roofing*/
+/* Показувати тільки на певних екранах */
+.roof-tabs-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.7s ease-out;
+}
+
+.roof-tabs-section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.roof-tabs-section.fade-out {
+    opacity: 0;
+    transform: translateY(40px);
+}
+.roof-tabs-section .container {
+    flex-direction: column;
+    gap: 30px;
+}
+.roof-hero {
+    background: url("../images/roofing/main.jpg") center/cover no-repeat;
+    height: 400px;
+    position: relative;
+}
+.roof-hero h2,
+.roof-hero p {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    max-width: 510px;
+    margin: 0 auto;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.roof-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 250px;
+    margin-right: 10px;
+}
+
+.roof-tab,
+.roof-tab:active,
+.roof-tab:focus {
+    background: #333;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.roof-tab:hover,
+.roof-tab.active {
+    background: var(--white-color);
+    color: var(--black-color);
+}
+
+.roof-content {
+    display: flex;
+    justify-content: center;
+}
+
+.roof-panel {
+    display: none;
+    max-width: 600px;
+    animation: fadeSlide 0.5s ease-out;
+}
+
+.roof-panel.active {
+    display: block;
+}
+
+.roof-panel img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.desktop-only {
+    display: flex;
+}
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+    .mobile-only {
+        display: block;
+    }
+    .roof-accordion {
+        width: 100%;
+    }
+
+    .roof-accordion details {
+        background: #2a2a2a;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        padding: 15px;
+        color: var(--white-color);
+    }
+
+    .roof-accordion summary {
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .roof-accordion img {
+        width: 100%;
+        margin: 15px 0;
+        border-radius: 8px;
+    }
 }
 
 @media (width < 868px) {

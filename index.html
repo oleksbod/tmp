@@ -237,6 +237,79 @@
                 </div>
             </section>
 
+            <section class="roof-tabs-section">
+                <div class="container">
+                    <div class="roof-hero">
+                        <div class="hero-overlay">
+                            <h2>Покрівельні роботи</h2>
+                            <p class="intro-text">
+                                Комплекс будівельних послуг із монтажу даху та його довготривалого захисту від погодних
+                                умов.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tab-container">
+                        <!-- Вкладки (показуються лише на десктопі) -->
+                        <div class="roof-tabs desktop-only">
+                            <button class="roof-tab active" onclick="selectRoof('ceramic')">Керамічна черепиця</button>
+                            <button class="roof-tab" onclick="selectRoof('slate')">Сланець</button>
+                            <button class="roof-tab" onclick="selectRoof('falz')">Фальц</button>
+                        </div>
+
+                        <!-- Контент панелі -->
+                        <div class="roof-content desktop-only">
+                            <div class="roof-panel active" id="roof-ceramic">
+                                <img src="images/roofing/ceramic.jpg" alt="Керамічна черепиця" />
+                                <p class="intro-text">
+                                    Виготовляється з глини при високій температурі. Має вогнестійкість, довговічність,
+                                    захист від вологи.
+                                </p>
+                            </div>
+                            <div class="roof-panel" id="roof-slate">
+                                <img src="images/roofing/slate.jpg" alt="Сланець" />
+                                <p class="intro-text">
+                                    Природний камінь із вишуканою текстурою. Витримує будь-яку негоду. Ідеальний для
+                                    елегантних проєктів.
+                                </p>
+                            </div>
+                            <div class="roof-panel" id="roof-falz">
+                                <img src="images/roofing/falz.jpg" alt="Фальц" />
+                                <p class="intro-text">
+                                    Металеві або цинкові листи, що забезпечують легкість, міцність та ефективне
+                                    водовідведення.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Акордеон (показується лише на мобільних) -->
+                        <div class="roof-accordion mobile-only">
+                            <details open>
+                                <summary>Керамічна черепиця</summary>
+                                <img src="images/roofing/ceramic.jpg" alt="Керамічна черепиця" />
+                                <p class="intro-text">
+                                    Вогнестійка, довговічна, виготовлена з глини, захищає від вологи.
+                                </p>
+                            </details>
+                            <details>
+                                <summary>Сланець</summary>
+                                <img src="images/roofing/slate.jpg" alt="Сланець" />
+                                <p class="intro-text">
+                                    Природний камінь, стійкий до зносу та погодних умов, естетичний вигляд.
+                                </p>
+                            </details>
+                            <details>
+                                <summary>Фальц</summary>
+                                <img src="images/roofing/falz.jpg" alt="Фальц" />
+                                <p class="intro-text">
+                                    Легка та міцна металева покрівля для складних форм, водовідведення.
+                                </p>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!--
             <section class="about">
                 <h2>Про компанію</h2>
@@ -535,6 +608,7 @@
         <script src="js/home.js"></script>
         <script src="js/facade.js"></script>
         <script src="js/partners.js"></script>
+        <script src="js/roofing.js"></script>
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
               
         -->
