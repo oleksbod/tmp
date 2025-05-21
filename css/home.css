@@ -8,7 +8,6 @@ section {
 }
 .section-anchor {
     position: absolute;
-    top: -70px;
 }
 
 .hero {
@@ -364,4 +363,27 @@ main {
 
 .dot.active {
     background: gray;
+}
+
+@media (width < 868px) {
+    .hero .container {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (width < 600px) {
+    .slogan-highlight {
+        flex-direction: column;
+        width: 260px;
+        text-align: left;
+    }
+}
+
+@media (width < 480px) {
+    .slogan-highlight {
+        font-size: 19px;
+        line-height: 24px;
+        gap: 20px;
+    }
 }
