@@ -15,6 +15,15 @@
     openMenuBtn.addEventListener("click", toggleMenu);
     closeMenuBtn.addEventListener("click", toggleMenu);
 
+    const navLinks = mobileMenu.querySelectorAll(".nav-link");
+    navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            mobileMenu.classList.remove("is-open");
+            openMenuBtn.setAttribute("aria-expanded", false);
+            bodyScrollLock.enableBodyScroll(document.body);
+        });
+    });
+
     // Close the mobile menu on wider screens if the device orientation changes
     window.matchMedia("(min-width: 768px)").addEventListener("change", (e) => {
         if (!e.matches) return;
