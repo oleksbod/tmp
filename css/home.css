@@ -64,8 +64,15 @@ section {
     animation: fadeInUp 2s ease-out;
     font-size: 22px;
     line-height: 27px;
-    font-weight: 600;
+    font-weight: 700;
     color: var(--white-color);
+}
+
+.hero .slogan-highlight {
+    flex-direction: column;
+    gap: 20px;
+    text-decoration: underline;
+    font-weight: 700;
 }
 
 @keyframes fadeInUp {
@@ -195,6 +202,11 @@ main {
     background-color: var(--white-color);
     border-radius: 50%;
 }
+.sidebar .social-link,
+.menu-container .social-link {
+    width: 44px;
+    height: 44px;
+}
 .social-link:hover {
     opacity: 0.5;
 }
@@ -279,6 +291,37 @@ main {
 .section-title {
     text-align: center;
     margin-bottom: 20px;
+}
+
+.aluminum-section .section-title {
+    position: relative;
+    margin-bottom: 40px;
+}
+@keyframes fullRotate {
+    0% {
+        transform: rotate(-20deg) scale(0.9);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: rotate(-30deg) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(-20deg) scale(0.9);
+        opacity: 0.7;
+    }
+}
+
+.animated-logo {
+    position: absolute;
+    bottom: -7px;
+    right: -26px;
+    height: 25px;
+    opacity: 0.7;
+    transform-origin: center;
+    animation: fullRotate 3s ease-in-out infinite;
 }
 
 .intro-text {
@@ -730,43 +773,148 @@ main {
     display: none;
 }
 
-@media (max-width: 768px) {
-    .desktop-only {
-        display: none;
-    }
-    .mobile-only {
-        display: block;
-    }
-    .roof-accordion {
-        width: 100%;
-    }
+/***********************/
+/*Objects*/
+.projects-section .container {
+    flex-direction: column;
+}
 
-    .roof-accordion details {
-        background: #2a2a2a;
-        border-radius: 10px;
-        margin-bottom: 15px;
-        padding: 15px;
-        color: var(--white-color);
-    }
+.projects-section .section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 8px;
+}
 
-    .roof-accordion summary {
-        font-size: 1.1rem;
-        font-weight: bold;
-        cursor: pointer;
-        outline: none;
-    }
+.projects-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
 
-    .roof-accordion img {
-        width: 100%;
-        margin: 15px 0;
-        border-radius: 8px;
-    }
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.projects-grid .project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.6s ease-out;
+}
+
+.project-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.2);
+}
+
+.projects-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.lightbox-gallery {
+    position: relative;
+    text-align: center;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+.lightbox-gallery img {
+    max-width: 100%;
+    max-height: 75vh;
+}
+
+.lightbox-gallery p,
+.project-card p {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    min-height: 40px;
+    height: auto;
+    line-height: 40px;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    font-size: 1rem;
+}
+
+.project-card p {
+    bottom: 0px;
+    padding: 6px 5px;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    line-height: 22px;
+    text-align: center;
+}
+
+.gallery-prev,
+.gallery-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 10;
+    width: 44px;
+    height: 44px;
+}
+.gallery-close {
+    position: fixed;
+    background: var(--white-color);
+    top: 15px;
+    right: 20px;
+    font-size: 40px;
+    color: var(--black-color);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 1005;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+}
+
+.gallery-prev {
+    left: 10px;
+}
+
+.gallery-next {
+    right: 10px;
 }
 
 @media (width < 868px) {
     .hero .container {
         align-items: center;
         text-align: center;
+    }
+    .about .slogan-highlight {
+        flex-direction: column;
+    }
+    .aluminum-section .section-title {
+        padding-right: 50px;
     }
     .card-container {
         height: auto;
@@ -814,11 +962,53 @@ main {
     }
 }
 
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+    .mobile-only {
+        display: block;
+    }
+    .roof-accordion {
+        width: 100%;
+    }
+
+    .roof-accordion details {
+        background: #2a2a2a;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        padding: 15px;
+        color: var(--white-color);
+    }
+
+    .roof-accordion summary {
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .roof-accordion img {
+        width: 100%;
+        margin: 15px 0;
+        border-radius: 8px;
+    }
+}
+
 @media (width < 600px) {
     .slogan-highlight {
         flex-direction: column;
-        width: 260px;
+        width: 100%;
         text-align: left;
+    }
+    .hero .slogan-highlight {
+        text-align: center;
+    }
+
+    .hero .slogan-highlight a {
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
 }
 
